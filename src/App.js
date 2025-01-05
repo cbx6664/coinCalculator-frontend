@@ -12,7 +12,7 @@ const App = () => {
         setError("");
         setResult([]);
         try {
-            const response = await fetch("http://178.128.116.205:8080/api/v1/coins", {
+            const response = await fetch("/api/v1/coins", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
