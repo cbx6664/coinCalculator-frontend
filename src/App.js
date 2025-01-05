@@ -3,7 +3,6 @@ import CoinCalculatorForm from "./components/CoinCalculatorForm";
 import ResultDisplay from "./components/ResultDisplay";
 import "./styles/App.css";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const App = () => {
     const [result, setResult] = useState([]);
@@ -13,7 +12,7 @@ const App = () => {
         setError("");
         setResult([]);
         try {
-            const response = await fetch(`${API_BASE_URL}/coins`, {
+            const response = await fetch(`api/v1/coins`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
