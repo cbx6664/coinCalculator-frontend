@@ -11,7 +11,7 @@ const App = () => {
     setError("");
     setResult([]);
     try {
-      const response = await fetch("http://localhost:8080/coins", {
+      const response = await fetch(`${API_BASE_URL}/coins`,  {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
